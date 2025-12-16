@@ -96,18 +96,18 @@ def minimax(board, depth, alpha, beta, is_maximizing, ai, human): # minimax vớ
                 break
         return best
 
+# Tìm nước đi tốt nhất cho AI 
+def best_move(board, depth, ai, human): # hỗ trợ tìm nước đi tốt nhất cho AI - luôn hiểu rằng đối thủ chơi tốt nhất
+    best_score = -float("inf") # khởi tạo best_score là âm vô cực
+    move = None # khởi tạo nước đi tốt nhất là None khi chưa tìm thấy nước đi tốt nhất
 
-def best_move(board, depth, ai, human):
-    best_score = -float("inf")
-    move = None
+    for (i, j) in get_available_moves(board): # duyệt qua các ô trống
+        board[i][j] = ai # đặt quân AI vào ô trống
+        score = minimax(board, depth, -float("inf"), float("inf"), 
+                        False, ai, human) # gọi minimax để đánh giá nước đi
+        board[i][j] = EMPTY # bỏ quân AI khỏi ô trống
 
-    for (i, j) in get_available_moves(board):
-        board[i][j] = ai
-        score = minimax(board, depth, -float("inf"), float("inf"),
-                        False, ai, human)
-        board[i][j] = EMPTY
-
-        if score > best_score:
+        if score > best_score: # nếu điểm số lớn hơn best_score hiện tại
             best_score = score
             move = (i, j)
 
