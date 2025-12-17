@@ -72,9 +72,33 @@ Mục tiêu là tìm đường đi có **tổng trọng số nhỏ nhất** từ
 
 ---
 
+## 🔷 6. Dữ liệu đầu vào
+
+Chương trình hỗ trợ **hai cách khởi tạo đồ thị**:
+
+### 🔹 6.1. Sinh đồ thị ngẫu nhiên
+- Người dùng nhập số đỉnh \( n \) ( \( 3 \le n \le 10 \) )
+- Mỗi đỉnh có **bậc tối thiểu ≥ 2**
+- Trọng số cạnh được sinh ngẫu nhiên trong khoảng từ 1 đến 9
+
+### 🔹 6.2. Load đồ thị từ file `.txt`
+
+Định dạng file:
+
+```txt
+6
+A B C D E F
+0 2 0 0 0 0
+2 0 3 0 1 0
+0 3 0 2 0 0
+0 0 2 0 3 2
+0 1 0 3 0 2
+0 0 0 2 2 0
+
+
 ---
 
-## 🔷 6. Mã giả thuật toán A*
+## 🔷 7. Mã giả thuật toán A*
 
 ```text
 OPEN ← {start}
@@ -92,31 +116,4 @@ while OPEN không rỗng:
             nếu m chưa trong OPEN hoặc g mới nhỏ hơn:
                 cập nhật g(m), parent(m)
                 đưa m vào OPEN
-
-
----
-
-## 🔷 7. Dữ liệu đầu vào
-
-Chương trình hỗ trợ **hai cách khởi tạo đồ thị**:
-
-### 🔹 7.1. Sinh đồ thị ngẫu nhiên
-- Người dùng nhập số đỉnh \( n \) ( \( 3 \le n \le 10 \) )
-- Mỗi đỉnh có **bậc tối thiểu ≥ 2**
-- Trọng số cạnh được sinh ngẫu nhiên trong khoảng từ 1 đến 9
-
-### 🔹 7.2. Load đồ thị từ file `.txt`
-
-Định dạng file:
-
-```txt
-6
-A B C D E F
-0 2 0 0 0 0
-2 0 3 0 1 0
-0 3 0 2 0 0
-0 0 2 0 3 2
-0 1 0 3 0 2
-0 0 0 2 2 0
-
 
