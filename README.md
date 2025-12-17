@@ -72,8 +72,11 @@ Mục tiêu là tìm đường đi có **tổng trọng số nhỏ nhất** từ
 
 ---
 
+---
+
 ## 🔷 6. Mã giả thuật toán A*
 
+```text
 OPEN ← {start}
 CLOSED ← ∅
 g(start) ← 0
@@ -89,6 +92,7 @@ while OPEN không rỗng:
             nếu m chưa trong OPEN hoặc g mới nhỏ hơn:
                 cập nhật g(m), parent(m)
                 đưa m vào OPEN
+
 
 ---
 
